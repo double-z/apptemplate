@@ -1,4 +1,4 @@
-# rails new appname -m powerup.rb
+# rails new appname -m https://raw.github.com/amaabca/apptemplate/master/powerup.rb
 
 # powerup.rb
 run "rm public/index.html"
