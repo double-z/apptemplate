@@ -11,6 +11,9 @@ inject_into_file 'config/application.rb', :before => "  end" do
   "\n    config.time_zone = 'Mountain Time (US & Canada)'\n\n"
 end
 
+# Generate standard unicorn config file
+get "https://raw.github.com/amaabca/apptemplate/master/config/unicorn.rb", "./config/unicorn.rb"
+
 after_bundler do
   git :init
   git :add => "."
@@ -26,3 +29,4 @@ say_wizard "Running after Bundler callbacks."
 # => Zurb Foundation gem by default?
 # => adding .erb to the end of generated .scss files
 # => a billion cats
+
