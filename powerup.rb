@@ -12,6 +12,7 @@ inject_into_file 'config/application.rb', :before => "  end" do
 end
 
 # Generate standard unicorn config file
+gem 'unicorn'
 get "https://raw.github.com/amaabca/apptemplate/master/config/unicorn.rb", "./config/unicorn.rb"
 
 after_bundler do
